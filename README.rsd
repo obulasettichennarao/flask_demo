@@ -1,1 +1,51 @@
 Simple API end point to handle git pull requests
+
+URL : curl -X GET --header 'Content-Type: application/json' --header 'Accept: application/json'  'http://127.0.0.1:5000/api/v1/Pull_requests/<owner_name>/<repo_name>'
+
+Example:
+--------
+curl -X GET --header 'Content-Type: application/json' --header 'Accept: application/json'  'http://127.0.0.1:5000/api/v1/Pull_requests/obulasettichennarao/flask_demo'
+
+Response:
+--------
+{"prs_list": [{"pr_id": 199891177, "pr_status": "open"}]}
+
+
+
+''' Simple API end point to handle git pull requests '''
+
+
+Installation steps:
+-------------------
+Prerequisites:
+python3.5
+
+
+
+1) Create virtual environment:
+ $ pyvenv-3.5 test_flask_end
+
+2) Activate virtualenv
+ $ source test_flask_end/bin/activate
+
+3) cd project/DemoApi & install requirments through pip:
+
+ $ pip install -r dev_requirements.txt
+
+4) Start the server
+
+$ python app.py
+
+
+
+
+URL: curl -X GET --header 'Content-Type: application/json' --header 'Accept: application/json'  'http://127.0.0.1:5000/api/v1/Pull_requests/obulasettichennarao/flask_demo'
+
+
+
+Output:
+-------
+{"prs_list": [{"pr_id": 199891177, "pr_status": "open"}]}
+
+
+
